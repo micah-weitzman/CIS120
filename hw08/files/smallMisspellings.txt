@@ -1,0 +1,11 @@
+lyon,lion
+chimpanze,chimpanzee
+gose,goose
+Tigger,tiger
+tigger,TRIGGER
+   helol, hello
+herro  , hello
+helo, hell 
+HELO, hello 
+MyKe, mIke
+teh, THE
