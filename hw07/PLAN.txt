@@ -1,0 +1,100 @@
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+CIS 120 Homework 7 README
+PennKey: wmicah
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+
+============
+=: Task 2 :=
+============
+
+- Do you plan on creating any new classes in your design? If so, what classes
+  are you making, what do they store, and what behaviors do they have?
+  
+  	I have decided to make a User and Channel classes to keep track of the various methods and 
+  	variables to keep track of. These classes help reduce cases of repeated code and ecapsulate 
+  	assocaiated variables in a clear and managable fasion. 
+
+- How do you plan on storing what users are registered on the server?
+
+	In a TreeMap data structure. The userID is the key and the User class is the associated value.
+	
+
+- How do you plan on keeping track of which user has which user ID, considering
+  the fact that the user's nickname can change over the course of the program?
+  
+  	I plan on using a TreeMap to map the nicknames to the registered userID. 
+  	This will allow users to change and update their nickname, while maintaining their own userID. 
+
+- How do you plan on storing what users are in a channel?
+	
+	I plan on storing the associated users in a channel by creating a list of users for each 
+	channel in the Channel class itself. This list can be reached by using helping methods 
+	built into the Channel class. 
+
+- How do you plan on keeping track of which user is the owner of each channel?
+
+	Within the Channel class, there is a private variable that keeps track of the owner of the
+	channel. The value of the owner can be reached by using helper methods. 
+
+- Justify your choice of collections (Set, Map, or List) for the
+  collections you use in your design.
+  
+  	A TreeMap will maintain the invariants by allowing the user the ability to update their 
+	nickname, but all references to another user will be directed to their userID. 
+	This keeps a unique userID for every User while also giving the ability to change the nickname 
+	while maintianing the same unique userID. 
+
+
+============
+=: Task 3 :=
+============
+
+- Did you make any changes to your design while doing this task? Why?
+
+	I updated some of the User class methods to more easily allow access to values associated 
+	with each user. This reduced redundancy in the code and allows easier access to variabeles. 
+
+
+============
+=: Task 4 :=
+============
+
+- Did you make any changes to your design while doing this task? Why?
+
+	I added many methods to the Channel class. This allowed me to access certain variables and
+	assess the state the Channel. It reduced repeated code blocks and made writing code easier 
+	to read. 
+
+
+============
+=: Task 5 :=
+============
+
+- How do you plan on keeping track of which channels are invite-only?
+
+	I added an isPrivate variable to the Channel class and make the rest of my code check if that 
+	variable is true or false before a random User could join that channel. 
+
+- Will you make any changes to your work from before in order to make
+  implementing invite-only channels easier?
+  
+ 	I forgot to earlier, but I had to go back and change some of the code to check is a channel was
+ 	public before the User joined that channel. 
+
+
+============
+=: Task 6 :=
+============
+
+- Did you have to make any changes to your design in Task 6? Why?
+	
+	I removed some of unnessary function in the Channel and User classes. These methods either 
+	weren't used in the rest of the project, or were acheived by other methods in the class. 
+	I also changed the private channel value from a function to a variable because the use of a 
+	method was redundant. I also removed a channel variable from the User class because this
+	duplicated values that could lead to discrepancy and only allowed the User to join one channel. 
+
+- If you were to redo this assignment, what changes (if any) would you make in
+  how you designed your code?
+  
+  	I might have added way to access the userID value of a user directly within the User class. 
